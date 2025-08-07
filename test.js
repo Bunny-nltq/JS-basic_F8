@@ -1,84 +1,39 @@
-/*alert('Hi JavaScript basic!')
+//LÀM VIỆC VỚI CHUỖI
 
-//Khai bao bien
-var fullName = 'Nguyen Le Truc Quynh'
-var age = 20;
+var myString = 'Hoc JS tai JS F8'
 
-alert(fullName)
-alert(age);
-*/
-/* 
-    noi dung o day la comment
-/**
- * 
- */
+//Keyword: Javascript string methods
 
-/**  Console
- * console.log(fullName)
- * console.warm(fullName)
- * console.error(fullName)
-*/
+//1.Length
+    console.log(myString.length)
 
-/**confirm('Xac nhan ban du tuoi!) */
-/**prompt('Xac nhan ban du tuoi!) */
+// 2.Find index
+    console.log(myString.indexOf('JS')) //tìm chỗi theo thứ tự JS đầu tiên trong string -1: không tìm thấy
+    console.log(myString.indexOf('JS', 6)) //tìm chữ JS tiếp theo sau thứ tự thứ 6
+    console.log(myString.lastIndexOf('JS')) //tìm chuỗi JS cuối cùng trong String
 
-/*
-setTimeout(function () {
+// 3. Cut string
+    console.log(myString.slice(4,6)) //cắt chuỗi từ vị trí số ...- ... theo thứ tự từ trái sang phải
+    console.log(myString.slice(-3,-1)) //cắt chuỗi từ vị trí số ...- ... theo thứ tự từ phải sang trái
 
-}, 1000)
+//4. Replace 
+    console.log(myString.replace('JS', 'Javascript')) //Thay thế chứ JS đầu tiên bằng chữ 'Javascript'
+    console.log(myString.replace(/JS/g, 'Javascript')) //Tìm và Thay thế tất cả các chữ JS bằng chữ 'Javascript'
 
-setInterval(function () {
+//5. Convert to upper case
+    console.log(mystring.toUpperCase()) //chuyển tất cả thành chữ in hoa
+//6. Convert to lower case 
+    console.log(mystring.toLowerCase()) //chuyển tất cả thành chữ in thường
 
-}, 1000)
-*/
+//7. Trim
+    console.log(myString.trim()) //loại bỏ khoảng trắng ở 2 đầu
 
-/** Toán tử */
+//8. Split
+    var languages = 'JavaScript, PHP, Ruby'
+    console.log(languages.split(', ')) //cắt chuỗi bằng cách tìm điểm chung vd trong đoạn chuỗi là ", "
 
-/**
- * Toán tử số học 
- * var a = 1 * 2
- * console.log(a)
- */
-
-/**
- * Toán tử gán
- * var fullName = 'Nguyen Le Truc Quynh'
- */
-
-/** 
- * Toán tử so sánh
- * var a = 1; 
- * var b = 2;
- * 
- * if(a > b) {
- * // code 
- * }
- */
-
-/** 
- * Toán tử logic
- * var a = 1;
- * var b = 2;
- * if(a > 0 && b > 0){
- *   //CODE
- * }
- */
-
-//Toán tử ++ --
-//Prefix & Postfix
-var a = 6
-
-//B1: +1 cho a, a = a + 1 => a = 7;
-//B2: Trả về a sau khi đc cộng 1
-var output = ++a;
-console.log('output: ', output)
-console.log('a: ', a)
-
-//B1: a copy, a copy = 6
-//B2: trừ 1  của a, a = a -1 => a = 5
-//B3: trả về a copy
-//var output = a++
-
-//console.log('output: ', output);
-
-//console.log('a: ', a)
+//9. Get a character by index
+    const myString2 = 'Son Dang'
+    //lấy chữ ở kí tự thứ ... trong chuỗi
+    console.log(myString2.charAt(10))
+    console.log(myString2[0])
