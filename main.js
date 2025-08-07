@@ -1,34 +1,25 @@
-// 1. To String
-var languages = [
-    'Javascript',
-    'PHP',
-    'Ruby'
-];
+// // - Đối tượng arguments
+// function writeLog() {
+//     console.log(arguments)//Tạo thành mảng có tên Arguments 
+// }
+// writeLog();
 
-// 2. Join
-console.log(languages.join(', ')) // chèn kí tự vào giữa các phần tử trong mảng
+// // - Vòng lặp for of
 
-// 3. Pop
-console.log(languages.pop()) //Xóa element cuối bảng và trả về phần tử đã xóa
+// function writeLog() {
+//     for(var param of arguments) { //chạy và in ra lấy phần tử của arguments và chạy số lần bằng số phần tử trong arguments
+//         console.log(param)
+//     }
+// }
+// writeLog('Log 1', 'Log2', 'Log3')
 
-// 4. Push
-console.log(languages.push('Dart')) //Thêm 1 hoặc nhiều phần tử vào cuối mảng và trả về số phần tử trong mảng
+// VD
+function writeLog() {
+    var myString = '';
+    for (var param of arguments) { //chạy và in ra lấy phần tử của arguments và chạy số lần bằng số phần tử trong arguments
+        myString += `${param} - `;
+    }
+    console.log(myString)
+}
 
-// 5. Shift
-console.log(languages.shift()) //Xóa phần tử đầu mảng và trả về phần tử đã xóa
-
-// 6. Unshift
-console.log(languages.shift()) //Thêm 1 hoặc nhiều phần tử vào đầu mảng và trả về số phần tử trong mảng
-
-// 7. Splicing
-languages.splice(1, 2, 'Dart')//đặt con trỏ ở phần tử số ..., từ vị trí đặt con trỏ xóa đi ... phần tử, truyền thêm phần tử tên '...' vào ngay vị trí con trỏ
-
-// 8. Concat
-var languages2 = [
-    'Dart',
-    'Ruby'
-]
-console.log(languages.concat(languages2)) //Gộp 2 mảng lại theo thứ tự trước sau
-
-// 9. Slicing
-console.log(languages.slice())//Cắt lấy element từ số ... trong mảng (còn lại bỏ)
+writeLog('Log1', 'Log2', 'Log3', 'Log4')
